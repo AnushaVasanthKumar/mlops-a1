@@ -22,10 +22,13 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run Decision Tree
+      - name: Fetch dataset
         run: |
-          python train.py
+          mkdir -p data
+          curl -L -o data/BostonHousing.csv https://raw.githubusercontent.com/selva86/datasets/master/BostonHousing.csv
+
+      - name: Run Decision Tree
+        run: python train.py
 
       - name: Run Kernel Ridge
-        run: |
-          python train2.py
+        run: python train2.py

@@ -1,9 +1,9 @@
 # train.py
 from sklearn.tree import DecisionTreeRegressor
-from misc import load_boston_manual, make_xy, evaluate_cv, train_test_holdout_mse
+from misc import load_boston, make_xy, evaluate_cv, train_test_holdout_mse
 
 if __name__ == "__main__":
-    df = load_boston_manual()
+    df = load_boston()
     X, y = make_xy(df, "MEDV")
 
     model = DecisionTreeRegressor(
