@@ -1,1 +1,4 @@
--e "numpy\npandas\nscikit-learn==1.3.2\njoblib" 
+numpy
+pandas
+scikit-learn==1.3.2
+joblib
